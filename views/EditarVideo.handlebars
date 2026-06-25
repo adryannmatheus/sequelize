@@ -1,0 +1,45 @@
+<h1>Editar Vídeo</h1>
+
+<form action="/videos/editar/{{video.id}}" method="POST">
+
+  <input type="text" name="titulo" value="{{video.titulo}}" />
+
+  <br /><br />
+
+  <input type="text" name="nomeCriador" value="{{video.nomeCriador}}" />
+
+  <br /><br />
+
+  <textarea name="descricao">{{video.descricao}}</textarea>
+
+  <br /><br />
+
+  <input
+    type="number"
+    name="qtdVisualizacoes"
+    value="{{video.qtdVisualizacoes}}"
+  />
+
+  <br /><br />
+
+  <input type="number" name="qtdCurtidas" value="{{video.qtdCurtidas}}" />
+
+  <br /><br />
+
+  <input type="text" name="hastagPrinc" value="{{video.hastagPrinc}}" />
+
+  <br /><br />
+
+  <input type="text" name="urlVideo" value="{{video.urlVideo}}" />
+
+  <br /><br />
+
+  <input type="text" name="urlThumb" value="{{video.urlThumb}}" />
+
+  <br /><br />
+
+  <button type="submit">
+    Atualizar
+  </button>
+
+</form>

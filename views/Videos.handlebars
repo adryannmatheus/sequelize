@@ -1,0 +1,43 @@
+<h1>Lista de Vídeos</h1>
+
+<a href="/videos/cadastrar">
+  Novo Vídeo
+</a>
+
+<hr />
+
+{{#each videos}}
+
+  <div>
+
+    <h3>{{titulo}}</h3>
+
+    <p>Criador: {{nomeCriador}}</p>
+
+    <p>{{descricao}}</p>
+
+    <p>Visualizações: {{qtdVisualizacoes}}</p>
+
+    <p>Curtidas: {{qtdCurtidas}}</p>
+
+    <p>#{{hastagPrinc}}</p>
+
+    <img src="{{urlThumb}}" width="200" />
+
+    <br /><br />
+
+    <a href="/videos/editar/{{id}}">
+      Editar
+    </a>
+
+    <form action="/videos/deletar/{{id}}" method="POST">
+      <button type="submit">
+        Excluir
+      </button>
+    </form>
+
+  </div>
+
+  <hr />
+
+{{/each}}

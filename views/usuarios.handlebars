@@ -1,0 +1,26 @@
+<h1>Lista de Usuários</h1>
+
+<a href="/cadastrarUsuario">
+  Cadastrar Usuário
+</a>
+
+<hr />
+
+<ul>
+  {{#each usuarios}}
+    <li>
+      {{nome}}
+      -
+      {{email}}
+      -
+      {{idade}}
+      anos
+
+      <form action="/usuarios/delete/{{id}}" method="POST">
+        <button type="submit">
+          Remover
+        </button>
+      </form>
+    </li>
+  {{/each}}
+</ul>
